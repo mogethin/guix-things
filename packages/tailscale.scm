@@ -1,4 +1,4 @@
-(define-module (guix-things packages tailscale)
+(define-module (mogethin packages tailscale)
 	       #:use-module (guix packages)
          #:use-module (gnu packages linux)
 	       #:use-module (guix gexp)
