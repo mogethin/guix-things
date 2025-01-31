@@ -1,4 +1,4 @@
-(define-module (btv tailscale)
+(define-module (tv tailscale)
   #:use-module ((guix licenses) #:prefix license:)
   #:use-module (guix utils)
   #:use-module (guix gexp)
@@ -139,7 +139,7 @@
               (replace 'build
                 (lambda _
                   ;; idk why but we have to unset GO111MODULE in order for the build to work
-                  ;; [btv] maybe vendor stuff is not getting picked up in go path?
+                  ;; [tv] maybe vendor stuff is not getting picked up in go path?
                   (unsetenv "GO111MODULE")
                   (chdir "./src/tailscale.com")
                   (invoke "go" "build" "-o" "tailscaled"
