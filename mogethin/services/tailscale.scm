@@ -1,11 +1,11 @@
-(define-module (guix-things services tailscale)
+(define-module (mogethin services tailscale)
 	       #:use-module (gnu services)
 	       #:use-module (gnu services shepherd)
 	       #:use-module (gnu services configuration)
 	       #:use-module (guix records)
 	       #:use-module (guix gexp)
 	       #:use-module (ice-9 match)
-	       #:use-module (guix-things packages tailscale)
+	       #:use-module (mogethin packages tailscale)
          #:use-module (gnu packages linux)
 	       #:export (tailscaled-service-type tailscaled-configuration))
 
