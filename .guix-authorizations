@@ -1,0 +1,6 @@
+;; -*- mode: scheme; -*-
+
+(authorizations
+ (version 0)
+ ((""
+   (name "mogethin"))))
