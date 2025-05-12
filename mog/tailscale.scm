@@ -98,7 +98,7 @@
      #:hash-algo hash-algorithm)))
 
 (define-public tailscale
-  (let ((version "1.82.5"))
+  (let ((version "1.82.0"))
     (package
       (name "tailscale")
       (version version)
@@ -106,7 +106,7 @@
                 (method go-fetch-vendored)
                 (uri (go-git-reference
                       (url "https://github.com/tailscale/tailscale")
-                      (commit "v1.82.5")
+                      (commit "v1.82.0")
                       (sha (base32 "0n4431472jwl1kqx5ncig06gkxnda6nih1isal2a3rr1z8apdgn1"))))
                 (sha256
                  (base32
