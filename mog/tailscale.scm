@@ -50,7 +50,7 @@
        #~(begin
            (use-modules (guix build utils))
            (let ((inputs (list
-                          #+go-1.23
+                          #+go-1.24
                           #+tar
                           #+bzip2
                           #+gzip)))
@@ -98,7 +98,7 @@
      #:hash-algo hash-algorithm)))
 
 (define-public tailscale
-  (let ((version "1.80.3"))
+  (let ((version "1.84.3"))
     (package
       (name "tailscale")
       (version version)
@@ -106,7 +106,7 @@
                 (method go-fetch-vendored)
                 (uri (go-git-reference
                       (url "https://github.com/tailscale/tailscale")
-                      (commit "v1.80.3")
+                      (commit "v1.84.3")
                       (sha (base32 "07s8kwksvd0f9r65zkrhp3sn4jrv0c8g5w0wbiv9qq950l8gdv2h"))))
                 (sha256
                  (base32
@@ -119,7 +119,7 @@
          #:phases
          (modify-phases %standard-phases
            (delete 'check))
-         #:go ,go-1.23))
+         #:go ,go-1.24))
       (home-page "https://tailscale.com")
       (synopsis "Tailscale client")
       (description "Tailscale client")
